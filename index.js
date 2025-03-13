@@ -15,9 +15,10 @@ function canvia_seccio(num_boto) {
             seccio.style.display = "none";    // s'oculten les seccions inactives
         }
     }
-}let validat = false;    // variable que permet saber si hi ha algun usuari validat
+}
+let validat = false;    // variable que permet saber si hi ha algun usuari validat
 let nom, contrasenya;
-let scriptURL = "https://script.google.com/macros/s/AKfycbygItkmb5bNFB9MzexIvOfg2WygTdWByBWH8Y__Ym-gbvNsc3AD0ltyCVn5nQQn2yk2LA/exec"    // s'ha de substituir la cadena de text per la URL del script
+let scriptURL = "https://script.google.com/macros/s/AKfycbwDCMTtyJt7cI3f3Pe6462H3ycJhlXA6DK6RFNaP-Jj1X5J4Yp0NGcY5bmDrFuMcNYAvA/exec"    // s'ha de substituir la cadena de text per la URL del script
 
 function inici_sessio() {
     nom = document.getElementById("nom_usuari").value;    // la propietat "value" d'un quadre de text correspon al text escrit per l'usuari
