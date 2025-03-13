@@ -18,7 +18,7 @@ function canvia_seccio(num_boto) {
 }
 let validat = false;    // variable que permet saber si hi ha algun usuari validat
 let nom, contrasenya;
-let scriptURL = "https://script.google.com/macros/s/AKfycbwDCMTtyJt7cI3f3Pe6462H3ycJhlXA6DK6RFNaP-Jj1X5J4Yp0NGcY5bmDrFuMcNYAvA/exec"    // s'ha de substituir la cadena de text per la URL del script
+let scriptURL =  "https://script.google.com/macros/s/AKfycbzVslX10Gtr4YotOhdFSvz9nV_AD597mfaEwrrf1p8ki6SxGgUc1s7zOuCjq7F9NFAk/exec"   // s'ha de substituir la cadena de text per la URL del script
 
 function inici_sessio() {
     nom = document.getElementById("nom_usuari").value;    // la propietat "value" d'un quadre de text correspon al text escrit per l'usuari
