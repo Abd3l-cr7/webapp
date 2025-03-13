@@ -15,14 +15,10 @@ function canvia_seccio(num_boto) {
             seccio.style.display = "none";    // s'oculten les seccions inactives
         }
     }
-}<div id="botons_sessio">
-  <button onclick="inici_sessio()">Inicia sessió</button>
-  <button onclick="nou_usuari()">Nou usuari</button>
-</div>  
-let validat = false;    // variable que permet saber si hi ha algun usuari validat
+}let validat = false;    // variable que permet saber si hi ha algun usuari validat
 let nom, contrasenya;
 let scriptURL = "https://script.google.com/.../exec"    // s'ha de substituir la cadena de text per la URL del script
- 
+
 function inici_sessio() {
     nom = document.getElementById("nom_usuari").value;    // la propietat "value" d'un quadre de text correspon al text escrit per l'usuari
     contrasenya = document.getElementById("contrasenya").value;
@@ -40,7 +36,13 @@ function inici_sessio() {
                 inicia_sessio();    // usuari validat, s'executen les instruccions del procediment "inicia_sessio"
             }
         });    
-}function nou_usuari() {
+}
+function inicia_sessio() {
+    validat = true;    // usuari validat
+    document.getElementById("seccio_0").style.display = "none";    // s'oculta la secció de validació d'usuaris
+    canvia_seccio(1);    // es mostra la secció 1
+}
+function nou_usuari() {
     nom = document.getElementById("nom_usuari").value;
     contrasenya = document.getElementById("contrasenya").value;
     let consulta_1 = scriptURL + "?query=select&where=usuari&is=" + nom;    // primera consulta per saber si ja existeix algun usuari amb el nom escrit per l'usuari que es vol registrar
@@ -66,7 +68,8 @@ function inici_sessio() {
                 alert("Ja existeix un usuari amb aquest nom.");
             }
         });
-}function tanca_sessio() {
+}
+function tanca_sessio() {
     if (validat) {
         if (confirm("Vols tancar la sessió?")) {    // S'ha respost "Sí"
             storage.setItem("usuari", "");
